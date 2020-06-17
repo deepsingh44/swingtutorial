@@ -14,9 +14,8 @@ public class WindowExample {
 	public static void main(String[] args) {
 		// we can use to create splash file
 		JWindow window = new JWindow();// container
-		window.setSize(300, 200);
+		window.setSize(600, 600);
 		window.setLocationRelativeTo(null);
-
 		// add a button component to a container
 		// JButton b1=new JButton("Hello");//component
 		// default position is center
@@ -39,7 +38,7 @@ public class WindowExample {
 		// b1.setBounds(100, 30, 100, 30);
 		// window.add(b1);//to add a button component to window container
 		ImageIcon ic = new ImageIcon("C:\\Users\\DEEP\\Desktop\\hd.jpg");
-		ImageIcon resizeImage = resize(ic, 300, 200);
+		ImageIcon resizeImage = resize(ic, 600, 600);
 		JLabel jimage = new JLabel(resizeImage);
 
 		window.add(jimage);
@@ -53,10 +52,14 @@ public class WindowExample {
 		
 		for(int i=0;i<=100;i++) {
 			pb.setValue(i);
-			try {
-				Thread.sleep(200);
-			}
-			catch(Exception e) {}
+		
+				try {
+					Thread.sleep(200);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+		
 		}
 		
 		if(pb.getValue()==100) {
